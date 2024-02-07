@@ -12,7 +12,7 @@ final public class CountryListKit {
     /// ```
     ///     try? CountryListKit.loadList()
     /// ```
-    static func loadList()  throws -> [CountryItem] {
+    public static func loadList()  throws -> [CountryItem] {
         let decoder = JSONDecoder()
         if let fileURL = Bundle.main.url(forResource: "CountryCodes", withExtension: "json") {
             let data = try Data(contentsOf: fileURL)
